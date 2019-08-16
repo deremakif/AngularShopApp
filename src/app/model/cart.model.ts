@@ -1,7 +1,7 @@
 import { Product } from "./product.model";
 import { Injectable } from '@angular/core';
 
-@Injectable()
+@Injectable() // Cart sınıfının servis olarak kullanılabilmesi için Injectable yaparız!
 export class Cart {
     public items:CartItem[] = [];
     public itemCount: number=0;

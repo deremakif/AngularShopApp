@@ -3,10 +3,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { RestService } from './rest.service';
 import { ProductRepository } from './product.repository';
 import { CategoryRepository } from './category.repository';
+import { Cart } from './cart.model';
 
 @NgModule({
     imports: [HttpClientModule],
-    providers: [RestService, ProductRepository, CategoryRepository]
+    providers: [RestService, ProductRepository, CategoryRepository, Cart] // Servisleri dışarı açmak için providers kısmına ekleriz.
 
 })
 
