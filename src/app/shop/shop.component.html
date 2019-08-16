@@ -3,11 +3,17 @@
 <div class="container pt-100 mb-5">
     <div class="row">
         <div class="col-3">
-            <a href="#" class="list-group-item list-group-item-action">Kategori 1</a>
-            <a href="#" class="list-group-item list-group-item-action">Kategori 2</a>
-            <a href="#" class="list-group-item list-group-item-action">Kategori 3</a>
-            <a href="#" class="list-group-item list-group-item-action">Kategori 4</a>
-            <a href="#" class="list-group-item list-group-item-action">Kategori 5</a>
+            <a href="#" (click)="changeCategory()" class="list-group-item list-group-item-action">
+                Tüm Kategoriler
+            </a>
+            <a *ngFor="let c of categories" 
+                (click)="changeCategory(c)" 
+                href="#" 
+                class="list-group-item list-group-item-action"
+                [class.active]="c==selectedCategory">
+                {{ c.name }}
+            </a>
+            
         </div>
         <div class="col-9">
             <div class="row">
