@@ -17,6 +17,11 @@
         </div>
         <div class="col-9">
             <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-warning">
+                        {{ products.length }} tane ürün bulundu.
+                    </div>
+                </div>
                 <ng-container *ngFor="let p of products">
                     <div class="col-md-4">
                        <div class="card mb-3">
