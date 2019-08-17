@@ -5,8 +5,9 @@ import { AdminComponent } from './admin.component';
 import { AuthGuard } from './auth.guard';
 import { ProductFormComponent } from './products/product-form/product-form.component';
 import { ProductListComponent } from './products/product-list/product-list.component';
-import { CategoryListComponent } from '../shop/category-list/category-list.component';
+import { CategoryListComponent } from './categories/category-list/category-list.component';
 import { OrderListComponent } from './orders/order-list/order-list.component';
+import { CategoryFormComponent } from './categories/category-form/category-form.component';
 
 const routes: Routes = [
   { path: 'auth', component: AuthComponent },
@@ -17,8 +18,8 @@ const routes: Routes = [
       {path:"products/:mode/", component: ProductFormComponent},
       {path:"products", component: ProductListComponent},
       {path:"categories/:mode/:id", component: CategoryListComponent},
-      {path:"categories/:mode/", component: ProductFormComponent},
-      {path:"categories", component: ProductListComponent},
+      {path:"categories/:mode/", component: CategoryFormComponent},
+      {path:"categories", component: CategoryListComponent},
       {path:"orders", component: OrderListComponent}
     ]
   },
