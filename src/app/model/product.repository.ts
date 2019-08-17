@@ -19,7 +19,7 @@ export class ProductRepository implements OnInit {
     }
 
     getProduct(id:number): Product{
-        return this.products.find(i => i.id === id);
+        return this.products.find(i => i.id == id);
     }
 
     getProducts(category: Category = null): Product[] {
