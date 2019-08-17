@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Category } from 'src/app/model/category.model';
+import { ActivatedRoute, Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
+import { CategoryRepository } from 'src/app/model/category.repository';
 
 @Component({
   selector: 'category-form',
@@ -7,9 +11,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryFormComponent implements OnInit {
 
-  constructor() { }
+  editing: boolean = false;
+  category: Category = new Category();
+
+  constructor(private activeRoute: ActivatedRoute, private repository: CategoryRepository, private router: Router) { 
+    this.editing = activeRoute.snapshot.params['mode'] == 'edit'; 
+    if(this.editing){
+      this.category = repository.getCategory(activeRoute.snapshot.params['id']);
+    }
+  }
 
   ngOnInit() {
+  }
+
+  save(form: NgForm) {
+     this.repository.saveCategory(this.category);
+     this.router.navigateByUrl('/admin/main/categories');
   }
 
 }
