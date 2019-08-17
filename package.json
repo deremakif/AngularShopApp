@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "json": "json-server data.js -p 3500"
+    "json": "json-server data.js -p 3500 -m auth-middleware.js"
   },
   "private": true,
   "dependencies": {
