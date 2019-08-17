@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductRepository } from 'src/app/model/product.repository';
+import { Product } from 'src/app/model/product.model';
 
 @Component({
   selector: 'product-list',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private productRepository: ProductRepository) { }
 
   ngOnInit() {
+  }
+
+  getProducts(): Product[] {
+    return this.productRepository.getProducts();
   }
 
 }
