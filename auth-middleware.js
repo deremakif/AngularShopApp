@@ -5,9 +5,10 @@ const username = "admin";
 const password = "secret";
 
 module.exports = function(req, res, next) {
+
     if(req.url === '/login' && req.method == 'POST'){
         if(req.body.username === username && req.body.password === password ) {
-            let token = jwt.sign({data: username, expiresIn: '1h'}, app_secret);
+            let token = jwt.sign({data: username, expiresIn:'1h'}, app_secret);
             res.json({ success: true, token: token});
         }
         else {
