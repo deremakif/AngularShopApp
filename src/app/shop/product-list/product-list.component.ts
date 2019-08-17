@@ -11,6 +11,7 @@ import { Cart } from 'src/app/model/cart.model';
 export class ProductListComponent implements OnInit {
 
   @Input() products: Product[] = [];
+  selectedProduct: Product = null;
 
   constructor( 
     private cart: Cart,
@@ -24,4 +25,11 @@ export class ProductListComponent implements OnInit {
     this.router.navigateByUrl('/cart');
   }
 
+  displayDetails(product: Product) {
+    this.selectedProduct = product;
+  }
+
+  hideDetails(){
+    this.selectedProduct = null;
+  }
 }
