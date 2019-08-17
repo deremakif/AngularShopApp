@@ -6,10 +6,11 @@ import { CategoryRepository } from './category.repository';
 import { Cart } from './cart.model';
 import { Order } from './order.model';
 import { OrderRepository } from './order.repository';
+import { AuthService } from './auth.service';
 
 @NgModule({
     imports: [HttpClientModule],
-    providers: [RestService, ProductRepository, CategoryRepository, Cart, Order, OrderRepository] // Servisleri dışarı açmak için providers kısmına ekleriz.
+    providers: [RestService, ProductRepository, CategoryRepository, Cart, Order, OrderRepository, AuthService] // Servisleri dışarı açmak için providers kısmına ekleriz.
 
 })
 
