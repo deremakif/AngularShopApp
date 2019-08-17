@@ -24,10 +24,17 @@
               </td>
               <td>{{item.product.name}}</td>
               <td>{{item.product.price}} TL</td>
-              <td>{{item.quantity}}</td>
+              <td>
+                <input type="text" 
+                       class="form-control"
+                       style="width: 50px;" 
+                       [value]="item.quantity"
+                       (change)="cart.updateQuantity(item.product,$event.target.value)">
+              </td>
               <td>{{item.quantity * item.product.price}} TL</td>
               <td>
-                <button class="btn btn-danger btn-sm">
+                <button class="btn btn-danger btn-sm"
+                        (click)="cart.removeItem(item.product.id)">
                   <i class="fa fa-times fa-fw"></i>
                 </button>
               </td>
