@@ -3,11 +3,26 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthComponent } from './auth/auth.component';
 import { AdminComponent } from './admin.component';
 import { AuthGuard } from './auth.guard';
+import { ProductFormComponent } from './products/product-form/product-form.component';
+import { ProductListComponent } from './products/product-list/product-list.component';
+import { CategoryListComponent } from '../shop/category-list/category-list.component';
+import { OrderListComponent } from './orders/order-list/order-list.component';
 
 const routes: Routes = [
-  {path: 'auth', component: AuthComponent },
-  {path: 'main', component: AdminComponent, canActivate:[AuthGuard] },
-  {path: '**', redirectTo: 'auth' }
+  { path: 'auth', component: AuthComponent },
+  {
+    path: 'main', component: AdminComponent, canActivate: [AuthGuard],
+    children: [
+      {path:"products/:mode/:id", component: ProductFormComponent},
+      {path:"products/:mode/", component: ProductFormComponent},
+      {path:"products", component: ProductListComponent},
+      {path:"categories/:mode/:id", component: CategoryListComponent},
+      {path:"categories/:mode/", component: ProductFormComponent},
+      {path:"categories", component: ProductListComponent},
+      {path:"orders", component: OrderListComponent}
+    ]
+  },
+  { path: '**', redirectTo: 'auth' }
 ];
 
 @NgModule({
