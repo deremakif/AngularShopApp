@@ -2,8 +2,8 @@
   <thead>
     <tr>
       <th></th>
-      <th>name</th>
-      <th>price</th>
+      <th>Adı</th>
+      <th>Fiyatı</th>
       <th></th>
     </tr>
   </thead>
@@ -15,8 +15,8 @@
       <td>{{p.name}}</td>
       <td>{{p.price}} TL</td>
       <td>
-        <button class="btn btn-warning btn-sm" [routerLink]="['/admin/main/products/edit',p.id]">Edit</button>
-        <button class="btn btn-danger btn-sm ml-1" (click)="deleteProduct(p)">Delete</button>
+        <button class="btn btn-warning btn-sm" [routerLink]="['/admin/main/products/edit',p.id]">Düzenle</button>
+        <button class="btn btn-danger btn-sm ml-1" (click)="deleteProduct(p)">Sil</button>
       </td>
     </tr>
   </tbody>

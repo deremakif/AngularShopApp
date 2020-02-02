@@ -10,7 +10,7 @@
             {{ selectedProduct.description }}
         </p>
         <button (click)="hideDetails()" class="btn btn-danger btn-sm">Seçimi İptal Et</button>
-        <button (click)="addProductToCart(selectedProduct)" class="btn btn-outline-primary btn-sm ml-3">Add To Cart</button>
+        <button (click)="addProductToCart(selectedProduct)" class="btn btn-outline-primary btn-sm ml-3">Sepete ekle</button>
     </div>
 </div>
 <div class="row" >
@@ -26,8 +26,8 @@
                </small>
            </div>
            <div class="card-footer text-center">
-               <button (click)="displayDetails(p)" class="btn btn-outline-primary btn-sm">Details</button>
-               <button (click)="addProductToCart(p)" class="btn btn-outline-primary btn-sm ml-3">Add To Cart</button>
+               <button (click)="displayDetails(p)" class="btn btn-outline-primary btn-sm">Detaylar</button>
+               <button (click)="addProductToCart(p)" class="btn btn-outline-primary btn-sm ml-3">Sepete ekle</button>
            </div>
        </div>     
     </div>

@@ -1,0 +1,6 @@
+.center-form{
+    width: 300px;    
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}

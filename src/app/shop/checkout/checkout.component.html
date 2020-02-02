@@ -9,28 +9,28 @@
 
   <form *ngIf="!orderSent" #form="ngForm" (ngSubmit)="submitOrder(form)" class="m-4">
     <div class="form-group">
-    <label>Name</label>
+    <label>Adınız</label>
     <input class="form-control" #name="ngModel" name="name" [(ngModel)]="order.name" required>
     <span *ngIf="submitted && name.invalid" class="text-danger">
       Lütfen adınızı giriniz.
     </span>
   </div>
   <div class="form-group">
-      <label>Address</label>
+      <label>Adres</label>
       <input class="form-control" #address="ngModel" name="address" [(ngModel)]="order.address" required>
       <span *ngIf="submitted && address.invalid" class="text-danger">
           Lütfen adresinizi giriniz.
         </span>
     </div>
     <div class="form-group">
-        <label>City</label>
+        <label>Şehir</label>
         <input class="form-control" #city="ngModel" name="city" [(ngModel)]="order.city" required>
         <span *ngIf="submitted && city.invalid" class="text-danger">
             Lütfen şehir bilgisi giriniz.
           </span>
       </div>
       <div class="form-group">
-          <label>Phone</label>
+          <label>Telefon</label>
           <input class="form-control" #phone="ngModel" name="phone" [(ngModel)]="order.phone" required>
           <span *ngIf="submitted && phone.invalid" class="text-danger">
               Lütfen telefon giriniz.

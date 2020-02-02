@@ -1,14 +1,14 @@
 <h5>
-  {{ editing ? "Edit" : "Create" }} Category
+  Kategori {{ editing ? "Düzenle" : "Oluştur" }}
 </h5>
 
 <form #form="ngForm" (ngSubmit)="save(form)">
-<div class="form-group">
-  <label>Name</label>
-  <input type="text" class="form-control" name="name" [(ngModel)]="category.name">
-</div>
-<button type="submit" class="btn btn-primary">
-  {{ editing ? "Edit" : "Create" }} Category
-</button>
-<button class="btn btn-warning" routerLink="/admin/main/categories">Cancel</button>
+  <div class="form-group">
+    <label>Adı</label>
+    <input type="text" class="form-control" name="name" [(ngModel)]="category.name">
+  </div>
+  <button type="submit" class="btn btn-primary">
+    Kategoriyi {{ editing ? "Düzenle" : "Oluştur" }}
+  </button>
+  <button class="btn btn-warning ml-2" routerLink="/admin/main/categories">İptal</button>
 </form>
