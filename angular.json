@@ -139,5 +139,8 @@
       }
     }
   },
-  "defaultProject": "ShopApp"
+  "defaultProject": "ShopApp",
+  "cli": {
+    "analytics": false
+  }
 }
