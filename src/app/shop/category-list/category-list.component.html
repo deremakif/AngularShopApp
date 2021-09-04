@@ -2,7 +2,9 @@
     <button 
         (click)="changeCategory()" 
         class="list-group-item list-group-item-action">
-        Tüm Kategoriler
+    
+
+        {{'allcategories' | translate }}
     </button>
     <button *ngFor="let c of categories" 
         (click)="changeCategory(c)"                 

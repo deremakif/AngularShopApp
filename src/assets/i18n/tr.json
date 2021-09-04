@@ -1,0 +1,14 @@
+{
+    "Sitetitle": "hedeler",
+    "allcategories": "Tüm Kategoriler",
+    "shopApp": "Mağaza Uygulaması",
+    "homePage": "Ana Sayfa",
+    "cart": "Sepet",
+    "adminPanel": "Yönetici Paneli",
+    "loginButton": "Giriş",
+    "registerButton": "Kayıt",
+    "logoutButton": "Çıkış",
+    "noProductMessage": "Sepetinizde henüz ürün yok.",
+    "availableProductMessage": " Sepetinizde {{ itemCount }} adet ürün bulunmaktadır.",
+    "totalPriceMessage": " Toplam {{ total }} TL"
+}

@@ -1,32 +1,72 @@
 <div class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
   <div class="container">
-    <a href="" class="navbar-brand">Mağaza Uygulaması</a>
+    <a href="" class="navbar-brand">
+      {{'shopApp' | translate }}
+
+
+
+    </a>
     <ul class="navbar-nav mr-auto">
       <li class="navbar-nav">
-        <a routerLink="/shop" class="nav-link active">Anasayfa</a>
+        <a routerLink="/shop" class="nav-link active">
+        
+          {{'homePage' | translate }}
+        </a>
       </li>
       <li class="navbar-nav">
-        <a routerLink="/cart" class="nav-link">Sepet</a>
+        <a routerLink="/cart" class="nav-link">
+          {{'cart' | translate }}
+        </a>
       </li>
+    
+      
       <li class="navbar-nav">
-        <a href="" class="nav-link">Siparişler</a>
-      </li>
-      <li class="navbar-nav">
-        <a routerLink="/admin/main" class="nav-link">Yönetici Paneli</a>
+        <a routerLink="/admin/main" class="nav-link">
+          {{'adminPanel' | translate }}
+        </a>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
       <li class="navbar-nav">
-        <a href="" class="nav-link" *ngIf="!isAuthenticated()">Giriş</a>
+        <a href="" class="nav-link" *ngIf="!isAuthenticated()">
+          
+          {{'loginButton' | translate }}
+        </a>
         <!-- TODO: login page for customers -->
       </li>
       <li class="navbar-nav">
-        <a href="" class="nav-link" *ngIf="!isAuthenticated()">Kayıt</a>
+        <a href="" class="nav-link" *ngIf="!isAuthenticated()">
+          {{'registerButton' | translate }}
+        </a>
         <!-- TODO: register page for customers -->
       </li>
       <li class="navbar-nav">
-        <a href="" class="nav-link" *ngIf="isAuthenticated()">Çıkış</a>
+        <a href="" class="nav-link" *ngIf="isAuthenticated()">
+          {{'logoutButton' | translate }}
+        
+          
+        </a>
       </li>
+
+      <li class="ml-3">
+        <select class="form-control" #selectedLang (change)="switchLang(selectedLang.value)">
+          <option *ngFor="let language of translate.getLangs()" [value]="language"
+            [selected]="language === translate.currentLang">
+            {{ language }}
+          </option>
+        </select>
+      </li>
+
+
+
+      
+      
+
+
+
+
+
+
     </ul>
   </div>
 </div>

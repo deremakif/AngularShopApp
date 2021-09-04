@@ -1,0 +1,16 @@
+{  
+    "Sitetitle": "hedes",
+    "allcategories": "All Categories",
+    "shopApp": "Shop App",
+    "homePage": "Home Page",
+    "cart": "Cart",
+    "adminPanel": "Admin",
+    "loginButton": "Login",
+    "registerButton": "Register",
+    "logoutButton": "Logout",
+    "noProductMessage":"No product available in the basket!",
+    
+    "availableProductMessage": " There are {{ itemCount }} product(s) in the basket!",
+    "totalPriceMessage": " Total price is {{ total }} TL"
+    
+}   
